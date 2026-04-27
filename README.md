@@ -1,14 +1,22 @@
-⚡ Radio Rust
+# ⚡ Radio Rust
+
 Rock band landing page — static HTML/CSS/JS
 
-HTML5
-CSS3
-Vanilla JS
-Responsive
-📋 Description
-Landing page for Radio Rust, a fictional rock band. The site features a hero section, upcoming tour dates, a band bio, a multimedia gallery, and a newsletter footer. Design uses a dark theme with red accents and a dramatic red glow aesthetic.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-📁 Project structure
+---
+
+## 📋 Description
+
+Landing page for **Radio Rust**, a fictional rock band. The site features a hero section, upcoming tour dates, a band bio, a multimedia gallery, and a newsletter footer. Design uses a dark theme with red accents and a dramatic red glow aesthetic.
+
+---
+
+## 📁 Project structure
+
+```
 radio-rust/
 ├── index.html
 ├── assets/
@@ -22,34 +30,68 @@ radio-rust/
 │       ├── logo.png
 │       └── logo.ico
 └── README.md
-✨ Features
-Hero section — fullscreen image with glowing red box-shadow overlay
-Events table — alternating red/dark rows with tour date info
-About section — band photo, description, and influences list
-Media grid — 3-column photo gallery (6 images)
-Footer — brand blurb + newsletter email subscription
-Mobile nav — hamburger menu toggle via JS on screens ≤ 768px
-🚀 Getting started
+```
+
+---
+
+## ✨ Features
+
+- **Hero section** — fullscreen image with glowing red box-shadow overlay
+- **Events table** — alternating red/dark rows with tour date info
+- **About section** — band photo, description, and influences list
+- **Media grid** — 3-column photo gallery (6 images)
+- **Footer** — brand blurb + newsletter email subscription
+- **Mobile nav** — hamburger menu toggle via JS on screens ≤ 768px
+
+---
+
+## 🚀 Getting started
+
 No dependencies or build step required. Just open the project in a browser:
 
+```bash
 git clone https://github.com/your-user/radio-rust.git
 open index.html
-Or serve locally with any static server (e.g. npx serve . or VS Code Live Server).
+```
 
-🧩 How the mobile menu works
-The hamburger button (.menu-toggle) is hidden on desktop. On mobile (≤ 768px), clicking it toggles the class nav-active on the .nav element, which switches it from display: none to a vertical flex column via CSS.
+Or serve locally with any static server:
+
+```bash
+npx serve .
+```
+
+> You can also use the **VS Code Live Server** extension for live reload during development.
+
+---
+
+## 🧩 How the mobile menu works
+
+The hamburger button (`.menu-toggle`) is hidden on desktop. On mobile (≤ 768px), clicking it toggles the class `nav-active` on the `.nav` element, which switches it from `display: none` to a vertical flex column via CSS.
+
+```js
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
 
 menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('nav-active');
+    nav.classList.toggle('nav-active');
 });
-🎨 Design
-Background
-#181818
-Accent
-#BE0000
-Text
-#f5f5f5
-Font
-Arial / Times New Roman
-📄 License
+```
+
+---
+
+## 🎨 Design
+
+| Token       | Value                       |
+|-------------|-----------------------------|
+| Background  | `#181818`                   |
+| Accent      | `#BE0000`                   |
+| Text        | `#f5f5f5`                   |
+| Font        | Arial / Times New Roman     |
+| Glow effect | `box-shadow: rgba(255,0,0,0.59)` |
+
+---
+
+## 📄 License
+
+MIT — free to use and modify.
 MIT — free to use and modify.
